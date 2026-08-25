@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events | Smart Event Management System</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/event.css">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+
+    <header>
+        <nav class="navbar">
+
+            <a href="../index.html" class="logo">
+                <img src="../image/logo1.png" alt="Smart Event Logo">
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="register-btn">Register</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- ===== PAGE HEADER ===== -->
+
+    <section class="page-header">
+
+        <div class="page-header-content">
+
+            <p>DISCOVER & PARTICIPATE</p>
+
+            <h1>Explore Events</h1>
+
+            <span>
+                Find exciting events, workshops, seminars and
+                competitions in one place.
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== SEARCH & FILTER ===== -->
+
+    <section class="event-search">
+
+        <div class="search-container">
+
+            <div class="search-box">
+                <label>Search Event</label>
+
+                <input
+                    type="text"
+                    id="eventSearch"
+                    placeholder="Search by event name..."
+                >
+            </div>
+
+
+            <div class="filter-box">
+
+                <label>Category</label>
+
+                <select id="categoryFilter">
+
+                    <option value="all">All Categories</option>
+                    <option value="technology">Technology</option>
+                    <option value="ai">Artificial Intelligence</option>
+                    <option value="workshop">Workshop</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="sports">Sports</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="filter-box">
+
+                <label>Location</label>
+
+                <select id="locationFilter">
+
+                    <option value="all">All Locations</option>
+                    <option value="seminar">Seminar Hall</option>
+                    <option value="auditorium">Auditorium</option>
+                    <option value="ground">College Ground</option>
+
+                </select>
+
+            </div>
+
+
+            <button class="search-button" onclick="filterEvents()">
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== EVENTS ===== -->
+
+    <section class="all-events">
+
+        <div class="events-heading">
+
+            <div>
+                <p>UPCOMING EVENTS</p>
+                <h2>Find Your Next Event</h2>
+            </div>
+
+            <span id="eventCount">6 Events</span>
+
+        </div>
+
+
+        <div class="event-grid" id="eventGrid">
+
+
+            <!-- ===== EVENT 1 ===== -->
+
+            <div class="event-item"
+                 data-category="technology"
+                 data-location="seminar">
+
+                <div class="event-image">
+                    💻
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-category">
+                        Technology
+                    </span>
+
+                    <h3>Web Development Workshop</h3>
+
+                    <div class="event-details">
+                        <p>📅 20 August 2026</p>
+                        <p>⏰ 10:00 AM - 1:00 PM</p>
+                        <p>📍 Seminar Hall</p>
+                    </div>
+
+                    <div class="event-bottom">
+
+                        <span class="seats">
+                            35 Seats Available
+                        </span>
+
+                        <a href="event-details.html?event=web"
+                           class="view-event">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ===== EVENT 2 ===== -->
+
+            <div class="event-item"
+                 data-category="ai"
+                 data-location="auditorium">
+
+                <div class="event-image">
+                    🤖
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-category">
+                        AI
+                    </span>
+
+                    <h3>Artificial Intelligence Seminar</h3>
+
+                    <div class="event-details">
+                        <p>📅 25 August 2026</p>
+                        <p>⏰ 11:00 AM - 2:00 PM</p>
+                        <p>📍 Auditorium</p>
+                    </div>
+
+                    <div class="event-bottom">
+
+                        <span class="seats">
+                            50 Seats Available
+                        </span>
+
+                        <a href="event-details.html?event=ai"
+                           class="view-event">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ===== EVENT 3 ===== -->
+
+            <div class="event-item"
+                 data-category="workshop"
+                 data-location="seminar">
+
+                <div class="event-image">
+                    🐍
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-category">
+                        Workshop
+                    </span>
+
+                    <h3>Python Programming Workshop</h3>
+
+                    <div class="event-details">
+                        <p>📅 28 August 2026</p>
+                        <p>⏰ 10:00 AM - 1:00 PM</p>
+                        <p>📍 Seminar Hall</p>
+                    </div>
+
+                    <div class="event-bottom">
+
+                        <span class="seats">
+                            20 Seats Available
+                        </span>
+
+                        <a href="event-details.html?event=python"
+                           class="view-event">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ===== EVENT 4 ===== -->
+
+            <div class="event-item"
+                 data-category="cultural"
+                 data-location="ground">
+
+                <div class="event-image">
+                    🎭
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-category">
+                        Cultural
+                    </span>
+
+                    <h3>Annual Cultural Festival</h3>
+
+                    <div class="event-details">
+                        <p>📅 30 August 2026</p>
+                        <p>⏰ 4:00 PM - 8:00 PM</p>
+                        <p>📍 College Ground</p>
+                    </div>
+
+                    <div class="event-bottom">
+
+                        <span class="seats">
+                            100 Seats Available
+                        </span>
+
+                        <a href="event-details.html?event=cultural"
+                           class="view-event">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ===== EVENT 5 ===== -->
+
+            <div class="event-item"
+                 data-category="sports"
+                 data-location="ground">
+
+                <div class="event-image">
+                    🏆
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-category">
+                        Sports
+                    </span>
+
+                    <h3>Inter College Sports Day</h3>
+
+                    <div class="event-details">
+                        <p>📅 5 September 2026</p>
+                        <p>⏰ 9:00 AM - 5:00 PM</p>
+                        <p>📍 College Ground</p>
+                    </div>
+
+                    <div class="event-bottom">
+
+                        <span class="seats">
+                            75 Seats Available
+                        </span>
+
+                        <a href="event-details.html?event=sports"
+                           class="view-event">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ===== EVENT 6 ===== -->
+
+            <div class="event-item"
+                 data-category="technology"
+                 data-location="auditorium">
+
+                <div class="event-image">
+                    🌐
+                </div>
+
+                <div class="event-content">
+
+                    <span class="event-category">
+                        Technology
+                    </span>
+
+                    <h3>College Tech Fest</h3>
+
+                    <div class="event-details">
+                        <p>📅 10 September 2026</p>
+                        <p>⏰ 9:30 AM - 6:00 PM</p>
+                        <p>📍 Auditorium</p>
+                    </div>
+
+                    <div class="event-bottom">
+
+                        <span class="seats">
+                            120 Seats Available
+                        </span>
+
+                        <a href="event-details.html?event=techfest"
+                           class="view-event">
+                            View Details
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- No Result Message -->
+
+        <div id="noEvents" class="no-events">
+            No events found.
+        </div>
+
+    </section>
+
+
+    <!-- ===== FOOTER ===== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <h2>Smart<span>Event</span></h2>
+
+                <p>
+                    A smart platform for discovering,
+                    managing and participating in events.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="../index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>📧 smartevent@example.com</p>
+                <p>📞 +91 98765 43210</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 Smart Event Management System
+        </div>
+
+    </footer>
+
+
+    <!-- ===== JAVASCRIPT ===== -->
+
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>
